@@ -1,0 +1,15 @@
+<form [formGroup]="signupform" (ngSubmit)="enviar(signupform.value)">
+    <label>
+        Usuario:
+    <input formControlName="usuario" type="text">
+    </label>
+    <br />
+    <label>
+        Contraseña:
+    <input formControlName="pass" type="password">
+    <br />
+    </label>
+    <label>
+        <button [disabled]="signupform.invalid" type="submit">Iniciar</button>
+        </label>
+</form>
